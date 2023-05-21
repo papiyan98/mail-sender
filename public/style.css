@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #0088ff;
+}
+
+form {
+  width: 480px;
+  display: inline-block;
+}
+
+.form-item {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.form-item label {
+  font-size: 1.3rem;
+}
+
+.form-item input {
+  height: 40px;
+}
+
+.form-item textarea {
+  resize: vertical;
+}
+
+.form-item input, 
+.form-item textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+  border: 2px solid #0088ff;
+}
+
+.submit-btn {
+  float: right;
+  width: 90px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: red;
+  cursor: pointer;
+  
+}
+
+.submit-btn:hover {
+  background: rgb(226, 13, 13);
+  border: 3px solid rgb(254, 126, 126);
+}
+
+.modal-overlay, .spinner-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.spinner-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.spinner-window img {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  border-radius: 5px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding: 15px 10px;  
+}
+
+.modal-body p {
+  margin: 0 0 5px;
+}
+
+.modal-footer {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: right;
+  border-top: 1px solid #ccc;
+}
+
+.modal-footer button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #fff;
+  background: #0088ff;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  form {
+    width: 340px;
+  }
+}
