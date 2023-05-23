@@ -165,4 +165,8 @@ form {
   form {
     width: 340px;
   }
+  
+  .form-item {
+    margin: 15px 0;
+  }
 }
